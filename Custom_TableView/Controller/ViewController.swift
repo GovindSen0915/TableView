@@ -7,13 +7,26 @@
 
 import UIKit
 
+protocol ViewControllerProtocol: AnyObject {
+    
+}
+
 class ViewController: UIViewController {
+    
+    var viewModel: ViewControllerProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    private func setupViewModel() {
+        self.viewModel = ViewModel(view: self)
     }
 
 
+}
+
+extension ViewController: ViewModelProtocol {
+    
 }
 

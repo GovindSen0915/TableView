@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+protocol ViewModelProtocol: AnyObject {
+    
+}
+
+class ViewModel {
+    
+    weak var view: ViewModelProtocol?
+    
+    init(view: ViewModelProtocol? = nil) {
+        self.view = view
+    }
+    
+}
+
+extension ViewModel: ViewControllerProtocol {
+    
+}
