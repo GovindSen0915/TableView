@@ -16,6 +16,8 @@
 		E8D5EFB22AA3029400077ECF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFB12AA3029400077ECF /* ViewModel.swift */; };
 		E8D5EFBA2AA30AAA00077ECF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFB92AA30AAA00077ECF /* TableViewCell.swift */; };
 		E8D5EFBC2AA30AC900077ECF /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFBB2AA30AC900077ECF /* SectionModel.swift */; };
+		E8D5EFBF2AA30C4E00077ECF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */; };
+		E8D5EFC02AA30C4E00077ECF /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E8D5EFB12AA3029400077ECF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E8D5EFB92AA30AAA00077ECF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E8D5EFBB2AA30AC900077ECF /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 		E8D5EFB62AA302DE00077ECF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */,
+				E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			files = (
 				E8D5EFA72AA3017A00077ECF /* LaunchScreen.storyboard in Resources */,
 				E8D5EFA42AA3017A00077ECF /* Assets.xcassets in Resources */,
+				E8D5EFC02AA30C4E00077ECF /* CustomCell.xib in Resources */,
 				E8D5EFA22AA3017900077ECF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +231,7 @@
 				E8D5EF9B2AA3017900077ECF /* AppDelegate.swift in Sources */,
 				E8D5EFB22AA3029400077ECF /* ViewModel.swift in Sources */,
 				E8D5EF9D2AA3017900077ECF /* SceneDelegate.swift in Sources */,
+				E8D5EFBF2AA30C4E00077ECF /* CustomCell.swift in Sources */,
 				E8D5EFBC2AA30AC900077ECF /* SectionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
