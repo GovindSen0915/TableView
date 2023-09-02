@@ -11,6 +11,7 @@ protocol ViewControllerProtocol: AnyObject {
     var numberOfSections: Int { get }
     func numberOfItemsAt(section: Int) -> Int
     func itemAt(indexPath: IndexPath) -> Any
+    func setupData()
 }
 
 class ViewController: UIViewController {
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.setupViewModel()
         self.setupTableview()
+        self.viewModel.setupData()
     }
     
     private func setupViewModel() {
@@ -31,7 +33,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ViewModelProtocol {
-    
+    func reload() {
+        self.tableView.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

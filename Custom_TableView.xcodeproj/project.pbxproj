@@ -18,6 +18,7 @@
 		E8D5EFBC2AA30AC900077ECF /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFBB2AA30AC900077ECF /* SectionModel.swift */; };
 		E8D5EFBF2AA30C4E00077ECF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */; };
 		E8D5EFC02AA30C4E00077ECF /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */; };
+		E8D5EFC32AA30D7700077ECF /* CustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFC22AA30D7700077ECF /* CustomCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E8D5EFBB2AA30AC900077ECF /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		E8D5EFC22AA30D7700077ECF /* CustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		E8D5EF992AA3017900077ECF /* Custom_TableView */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EFC12AA30D5B00077ECF /* CellModels */,
 				E8D5EFB72AA30A7200077ECF /* Helpers */,
 				E8D5EFB32AA302A100077ECF /* Application */,
 				E8D5EFB52AA302D100077ECF /* Extension */,
@@ -154,6 +157,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		E8D5EFC12AA30D5B00077ECF /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				E8D5EFC22AA30D7700077ECF /* CustomCellModel.swift */,
+			);
+			path = CellModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +241,7 @@
 				E8D5EF9F2AA3017900077ECF /* ViewController.swift in Sources */,
 				E8D5EF9B2AA3017900077ECF /* AppDelegate.swift in Sources */,
 				E8D5EFB22AA3029400077ECF /* ViewModel.swift in Sources */,
+				E8D5EFC32AA30D7700077ECF /* CustomCellModel.swift in Sources */,
 				E8D5EF9D2AA3017900077ECF /* SceneDelegate.swift in Sources */,
 				E8D5EFBF2AA30C4E00077ECF /* CustomCell.swift in Sources */,
 				E8D5EFBC2AA30AC900077ECF /* SectionModel.swift in Sources */,

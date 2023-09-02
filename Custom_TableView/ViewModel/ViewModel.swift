@@ -17,13 +17,18 @@ class ViewModel {
     var sectionModels = [SectionModel]()
     var cellModels = [Any]()
     
-    init(view: ViewModelProtocol? = nil) {
+    init(view: ViewModelProtocol) {
         self.view = view
+    }
+    
+    func prepareCellModel() {
+        
     }
     
 }
 
 extension ViewModel: ViewControllerProtocol {
+    
     var numberOfSections: Int {
         return self.sectionModels.count
     }
@@ -34,6 +39,10 @@ extension ViewModel: ViewControllerProtocol {
     
     func itemAt(indexPath: IndexPath) -> Any {
         return self.sectionModels[indexPath.section].cellModels[indexPath.row]
+    }
+    
+    func setupData() {
+        self.prepareCellModel()
     }
     
     
