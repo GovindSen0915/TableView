@@ -1,10 +1,5 @@
 # TableView
 
-- **Demo**:
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-09-02 at 17 52 16](https://github.com/GovindSen0915/TableView/assets/85836893/93c2cf3c-94a5-439d-9fca-df6dae43823e)
-
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-09-02 at 17 52 38](https://github.com/GovindSen0915/TableView/assets/85836893/9d066344-956a-4974-ba59-cb875b95380b)
-
 - **Purpose**: This Swift code is designed to create a basic iOS application that displays data in a table view using the MVVM (Model-View-ViewModel) architectural pattern.
 
 - **Components**:
