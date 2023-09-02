@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocol
 protocol ViewControllerProtocol: AnyObject {
     var numberOfSections: Int { get }
     func numberOfItemsAt(section: Int) -> Int
@@ -14,12 +15,13 @@ protocol ViewControllerProtocol: AnyObject {
     func setupData()
 }
 
+// MARK: - UIViewController
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: ViewControllerProtocol!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
@@ -32,13 +34,16 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - ViewModelProtocol
 extension ViewController: ViewModelProtocol {
     func reload() {
         self.tableView.reloadData()
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func setupTableview() {
         self.tableView.delegate = self
         self.tableView.dataSource = self

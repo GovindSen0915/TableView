@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: - Protocol
 protocol ViewModelProtocol: AnyObject {
     func reload()
 }
 
+// MARK: - ViewModel
 class ViewModel {
     
     weak var view: ViewModelProtocol?
@@ -25,9 +27,6 @@ class ViewModel {
         self.sectionModels = []
         self.cellModels = []
         
-        let cellModel1 = CustomCellModel(name: "Trending")
-        
-        
         let dummyCellModel1 = CustomCellModel(name: "DEMO")
         self.cellModels.append(dummyCellModel1)
         self.sectionModels.append(SectionModel(cellModels: self.cellModels))
@@ -36,6 +35,7 @@ class ViewModel {
     
 }
 
+// MARK: - ViewControllerProtocol
 extension ViewModel: ViewControllerProtocol {
     
     var numberOfSections: Int {

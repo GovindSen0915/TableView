@@ -10,12 +10,11 @@ import UIKit
 class CustomCell: TableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func configure(_ item: Any?) {
         guard let model = item as? CustomCellModel else {
             return
