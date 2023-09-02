@@ -42,6 +42,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func setupTableview() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.registerCell(CustomCell.self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,9 +55,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? CustomCell else {
+            return UITableViewCell()
+        }
+        
+        cell.item = self.viewModel.itemAt(indexPath: indexPath)
+        cell.delegate = self
+        return cell
     }
-    
     
 }
 

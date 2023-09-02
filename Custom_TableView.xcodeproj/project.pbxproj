@@ -19,6 +19,7 @@
 		E8D5EFBF2AA30C4E00077ECF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */; };
 		E8D5EFC02AA30C4E00077ECF /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */; };
 		E8D5EFC32AA30D7700077ECF /* CustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFC22AA30D7700077ECF /* CustomCellModel.swift */; };
+		E8D5EFC52AA30F3B00077ECF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EFC42AA30F3B00077ECF /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E8D5EFBD2AA30C4E00077ECF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E8D5EFBE2AA30C4E00077ECF /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E8D5EFC22AA30D7700077ECF /* CustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellModel.swift; sourceTree = "<group>"; };
+		E8D5EFC42AA30F3B00077ECF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		E8D5EFB52AA302D100077ECF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EFC42AA30F3B00077ECF /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				E8D5EFBA2AA30AAA00077ECF /* TableViewCell.swift in Sources */,
 				E8D5EF9F2AA3017900077ECF /* ViewController.swift in Sources */,
 				E8D5EF9B2AA3017900077ECF /* AppDelegate.swift in Sources */,
+				E8D5EFC52AA30F3B00077ECF /* UIView+Extension.swift in Sources */,
 				E8D5EFB22AA3029400077ECF /* ViewModel.swift in Sources */,
 				E8D5EFC32AA30D7700077ECF /* CustomCellModel.swift in Sources */,
 				E8D5EF9D2AA3017900077ECF /* SceneDelegate.swift in Sources */,

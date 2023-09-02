@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ViewModelProtocol: AnyObject {
-    
+    func reload()
 }
 
 class ViewModel {
@@ -22,7 +22,16 @@ class ViewModel {
     }
     
     func prepareCellModel() {
+        self.sectionModels = []
+        self.cellModels = []
         
+        let cellModel1 = CustomCellModel(name: "Trending")
+        
+        
+        let dummyCellModel1 = CustomCellModel(name: "DEMO")
+        self.cellModels.append(dummyCellModel1)
+        self.sectionModels.append(SectionModel(cellModels: self.cellModels))
+        self.view?.reload()
     }
     
 }
