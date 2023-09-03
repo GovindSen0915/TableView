@@ -9,7 +9,8 @@ import UIKit
 
 class CustomCell: TableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var calendarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +20,8 @@ class CustomCell: TableViewCell {
         guard let model = item as? CustomCellModel else {
             return
         }
-        self.nameLabel.text = model.name
+//        self.dateLabel.text = model.name
+        self.dateLabel.text = DateHelper.date(fromDate: model.day, format: .custom1)
     }
     
 }

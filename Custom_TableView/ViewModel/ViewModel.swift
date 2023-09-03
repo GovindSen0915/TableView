@@ -18,6 +18,7 @@ class ViewModel {
     weak var view: ViewModelProtocol?
     var sectionModels = [SectionModel]()
     var cellModels = [Any]()
+    var currentDate: Date = Date()
     
     init(view: ViewModelProtocol) {
         self.view = view
@@ -27,9 +28,21 @@ class ViewModel {
         self.sectionModels = []
         self.cellModels = []
         
-        let dummyCellModel1 = CustomCellModel(name: "DEMO")
-        self.cellModels.append(dummyCellModel1)
-        self.sectionModels.append(SectionModel(cellModels: self.cellModels))
+//        let dummyCellModel1 = CustomCellModel(name: "DEMO")
+//        self.cellModels.append(dummyCellModel1)
+//        self.sectionModels.append(SectionModel(cellModels: self.cellModels))
+        
+        var dates = DateHelper.getDaysSimple(for: self.currentDate)
+        dates = dates.filter({ $0.day() >= currentDate.day() })
+        
+        let dateModels = dates.map({ CustomCellModel(day: $0) })
+//        for dateNum in 0..<31 {
+//
+//            let dateCellModel = NewCellModel(day: self.selectedDate!.addDay(dateNum), leave: "No leave applied")
+//            self.cellModels.value.append(dateCellModel)
+//        }
+        
+        self.sectionModels = [SectionModel(headerModel: nil, cellModels: dateModels, footerModel: nil)]
         self.view?.reload()
     }
     

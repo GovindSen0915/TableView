@@ -7,10 +7,6 @@
 
 import Foundation
 
-class CustomCellModel {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
+struct CustomCellModel {
+    var day: Date
 }

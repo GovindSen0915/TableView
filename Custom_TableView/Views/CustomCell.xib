@@ -4,12 +4,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="90" id="Jcd-QC-pW6" userLabel="CustomCell" customClass="CustomCell" customModule="Custom_TableView" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="90" id="Jcd-QC-pW6" userLabel="CustomCell" customClass="CustomCell" customModule="Custom_TableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="360" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jcd-QC-pW6" id="bJp-wt-3xS">
@@ -17,27 +18,41 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJj-oB-k5q">
-                        <rect key="frame" x="20" y="20" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="ONm-va-a5e"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="120" y="20" width="220" height="50"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z8f-FE-sZU">
+                        <rect key="frame" x="20" y="21.666666666666664" width="50" height="46.999999999999993"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="8tK-Lw-xoK"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kJj-oB-k5q" secondAttribute="trailing" constant="20" id="91Q-qV-EkI"/>
+                    <constraint firstItem="Z8f-FE-sZU" firstAttribute="leading" secondItem="bJp-wt-3xS" secondAttribute="leading" constant="20" id="BzP-1M-UUt"/>
                     <constraint firstItem="kJj-oB-k5q" firstAttribute="top" secondItem="bJp-wt-3xS" secondAttribute="top" constant="20" id="FrS-zY-peX"/>
-                    <constraint firstItem="kJj-oB-k5q" firstAttribute="leading" secondItem="bJp-wt-3xS" secondAttribute="leading" constant="20" id="cV8-qu-Ucx"/>
+                    <constraint firstItem="kJj-oB-k5q" firstAttribute="leading" secondItem="Z8f-FE-sZU" secondAttribute="trailing" constant="50" id="NoX-sS-9RZ"/>
+                    <constraint firstItem="Z8f-FE-sZU" firstAttribute="top" secondItem="bJp-wt-3xS" secondAttribute="top" constant="20" id="bys-J7-rCd"/>
+                    <constraint firstAttribute="bottom" secondItem="Z8f-FE-sZU" secondAttribute="bottom" constant="20" id="jyi-Mc-9oN"/>
                     <constraint firstAttribute="bottom" secondItem="kJj-oB-k5q" secondAttribute="bottom" constant="20" id="mrV-Sm-bKT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ZaO-MT-QuD"/>
             <connections>
-                <outlet property="nameLabel" destination="kJj-oB-k5q" id="FCv-R8-JHI"/>
+                <outlet property="calendarImage" destination="Z8f-FE-sZU" id="VZH-LA-nqo"/>
+                <outlet property="dateLabel" destination="kJj-oB-k5q" id="FCv-R8-JHI"/>
             </connections>
             <point key="canvasLocation" x="119.08396946564885" y="35.91549295774648"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
