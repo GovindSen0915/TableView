@@ -20,7 +20,7 @@ class CustomCell: TableViewCell {
         guard let model = item as? CustomCellModel else {
             return
         }
-//        self.dateLabel.text = model.name
+        
         self.dateLabel.text = DateHelper.date(fromDate: model.day, format: .custom1)
     }
     

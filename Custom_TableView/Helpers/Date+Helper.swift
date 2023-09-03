@@ -74,8 +74,8 @@ struct DateHelper {
     }
     
     public static func dateWithTimeZoneString(fromDate date: Date,
-                                        timeZone: String,
-                                        format: DateFormat) -> String? {
+                                              timeZone: String,
+                                              format: DateFormat) -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format.string
         dateFormatter.timeZone = TimeZone(abbreviation: timeZone)
@@ -241,15 +241,8 @@ extension Date {
         return component.second ?? 0
     }
     
-//    func daysTill(date: Date) -> Int {
-//        print(self.customFormattedDate())
-//        print(date.customFormattedDate())
-//        let component = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: self, to: date)
-//        return component.day ?? 0
-//    }
-    
     func daysTill(date: Date) -> Int {
-
+        
         let currentCalendar = Calendar.current
         guard let start = currentCalendar.ordinality(of: .day, in: .era, for: self) else {
             return 0
@@ -286,8 +279,8 @@ extension Date {
 
 extension Date {
     private func convertToTimeZone(initTimeZone: TimeZone, timeZone: TimeZone) -> Date {
-         let delta = TimeInterval(timeZone.secondsFromGMT(for: self) - initTimeZone.secondsFromGMT(for: self))
-         return addingTimeInterval(delta)
+        let delta = TimeInterval(timeZone.secondsFromGMT(for: self) - initTimeZone.secondsFromGMT(for: self))
+        return addingTimeInterval(delta)
     }
     
     func toUTCTimeZone() -> Date {
@@ -397,7 +390,7 @@ extension DateHelper {
         //start with the first day
         //building a date from just a year and a month gets us day 1
         var date = cal.date(from: comps)!
-
+        
         //somewhere to store our output
         var dates: [Date] = []
         //loop thru the days of the month
@@ -409,7 +402,7 @@ extension DateHelper {
         }
         return dates
     }
-
+    
 }
 
 extension DateHelper {
@@ -439,7 +432,7 @@ extension Date {
         let calendar = Calendar.current
         let dayOfWeek = calendar.component(.weekday, from: self)
         return calendar.range(of: .weekday, in: .weekOfYear, for: self)!.compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: self) }
-//            .filter { !calendar.isDateInWeekend($0) }
+        //            .filter { !calendar.isDateInWeekend($0) }
     }
     
     func dateWithMonthName() -> String? {
@@ -453,6 +446,6 @@ extension Date {
     func year() -> String? {
         DateHelper.date(fromDate: self, format: .yyyy)
     }
-    }
+}
 
 
