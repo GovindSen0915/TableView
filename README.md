@@ -1,5 +1,9 @@
 # TableView
 
+Tableview Light Mode    |  Tableview Dark Mode
+:-------------------------:|:-------------------------:
+<Light_Mode.png">|<Dark_Mode.png">
+
 - **Purpose**: This Swift code is designed to create a basic iOS application that displays data in a table view using the MVVM (Model-View-ViewModel) architectural pattern.
 
 - **Components**:
