@@ -2,7 +2,7 @@
 
 Tableview Light Mode    |  Tableview Dark Mode
 :-------------------------:|:-------------------------:
-<Simulator Screenshot - iPhone 14 Pro - 2023-09-08 at 23.27.45.png">|<Simulator Screenshot - iPhone 14 Pro - 2023-09-08 at 23.27.51.png">
+<img alt="Products List" src="Screenshots/TableView_Light_Mode.png">|<img alt="Products list" src="Screenshots/TableView_Dark_Mode.png">
 
 - **Purpose**: This Swift code is designed to create a basic iOS application that displays data in a table view using the MVVM (Model-View-ViewModel) architectural pattern.
 
